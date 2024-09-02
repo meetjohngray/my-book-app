@@ -10,7 +10,7 @@ export async function getAllBooks(): Promise<Book[]> {
         'books.publication_year',
         'books.description',
         'genres.name as genre',
-        connection.raw('GROUP_CONCAT(authors.name SEPARATOR ", ") as authors')
+        connection.raw('group_concat(authors.name, ", ") as authors')
       )
       .leftJoin('genres', 'books.genre_id', 'genres.id')
       .leftJoin('author_books', 'books.id', 'author_books.book_id')
