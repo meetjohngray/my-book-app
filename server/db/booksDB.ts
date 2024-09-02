@@ -1,5 +1,5 @@
 import connection from './connection'
-import { Book } from '../../models/book'
+import { Book } from '../../models/books'
 
 export async function getAllBooks(): Promise<Book[]> {
   try {
