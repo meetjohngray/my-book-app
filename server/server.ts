@@ -6,6 +6,8 @@ const server = express()
 server.use(express.json())
 
 // ADD YOUR API ROUTES HERE
+import booksRoutes from './routes/books'
+server.use('/api/v1/books', booksRoutes)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))
