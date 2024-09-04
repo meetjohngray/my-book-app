@@ -22,9 +22,9 @@ function BookList() {
 
   return (
     <div className="book-list">
-      {books.map((book) => (
+      {books?.map((book) => (
         <BookItem key={book.id} book={book} />
-      ))}
+      )) || 'No books available'}
     </div>
   )
 }
