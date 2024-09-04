@@ -1,6 +1,5 @@
 import express from 'express'
 import { getAllBooks } from '../db/booksDB'
-import { Book } from '../../models/books'
 
 const router = express.Router()
 
@@ -10,7 +9,11 @@ router.get('/', async (req, res) => {
     res.json(books)
   } catch (error) {
     console.error('Error in GET /api/v1/books:', error)
-    res.status(500).json({ message: 'Unable to retrieve books', error: error.message })
+    if (error instanceof Error) {
+      res.status(500).json({ message: 'Unable to retrieve books', error: error.message })
+    } else {
+      res.status(500).json({ message: 'Unable to retrieve books', error: 'An unknown error occurred' })
+    }
   }
 })
 
