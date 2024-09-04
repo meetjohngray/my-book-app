@@ -21,11 +21,13 @@ function BookList() {
   }
 
   return (
-    <div className="book-list">
-      <p>The Book List</p>
-      {books?.map((book) => (
-        <BookItem key={book.id} book={book} />
-      )) || 'No books available'}
+    <div>
+      <h2>Book List</h2>
+      <div className="book-list">
+        {books?.map((book) => (
+          <BookItem key={book.id} book={book} />
+        )) || 'No books available'}
+      </div>
     </div>
   )
 }

@@ -5,4 +5,41 @@ body {
   margin: 0;
   padding: 20px;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-item:hover {
+  transform: translateY(-5px);
+}
+
+.book-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.book-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.book-item .description {
+  margin-top: 10px;
+  font-style: italic;
+  color: #888;
 }
