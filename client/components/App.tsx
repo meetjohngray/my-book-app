@@ -1,7 +1,5 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import BookList from './BookList'
-import Home from './Home'
-import About from './About'
+import { Link } from 'react-router-dom'
+import AppRoutes from './AppRoutes'
 
 function App() {
   return (
@@ -17,19 +15,29 @@ function App() {
         </nav>
       </header>
       <section className="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/books" element={<BookList />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <AppRoutes />
       </section>
     </div>
   )
 }
 
 export default App
+import { Routes, Route } from 'react-router-dom'
+import BookList from './BookList'
+import Home from './Home'
+import About from './About'
 
+function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/books" element={<BookList />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  )
+}
 
+export default AppRoutes
 function Home() {
   return (
     <div>
@@ -40,8 +48,6 @@ function Home() {
 }
 
 export default Home
-
-
 function About() {
   return (
     <div>
