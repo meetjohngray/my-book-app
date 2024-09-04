@@ -23,7 +23,7 @@ function App() {
 
 export default App
 import { Routes, Route } from 'react-router-dom'
-import BookList from './BookList'
+import BookSortAndFilter from './BookSortAndFilter'
 import Home from './Home'
 import About from './About'
 
@@ -31,7 +31,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/books" element={<BookList />} />
+      <Route path="/books" element={<BookSortAndFilter />} />
       <Route path="/about" element={<About />} />
     </Routes>
   )
