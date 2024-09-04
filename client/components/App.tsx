@@ -28,7 +28,7 @@ function App() {
 }
 
 export default App
-import React from 'react'
+
 
 function Home() {
   return (
@@ -40,7 +40,7 @@ function Home() {
 }
 
 export default Home
-import React from 'react'
+
 
 function About() {
   return (
