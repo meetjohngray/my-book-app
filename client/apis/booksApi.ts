@@ -8,15 +8,15 @@ export async function getBooks(): Promise<Book[]> {
   return response.body
 }
 
-export interface SortAndFilterCriteria {
-  sortBy: string
-  genre?: string
-  minRating?: number
-  publicationYear?: number
-}
+// export interface SortAndFilterCriteria {
+//   sortBy: string
+//   genre?: string
+//   minRating?: number
+//   publicationYear?: number
+// }
 
-export async function sortAndFilterBooks(criteria: SortAndFilterCriteria): Promise<Book[]> {
-  const response = await request.get(rootUrl + '/books')
-    .query(criteria)
-  return response.body
-}
+// export async function sortAndFilterBooks(criteria: SortAndFilterCriteria): Promise<Book[]> {
+//   const response = await request.get(rootUrl + '/books')
+//     .query(criteria)
+//   return response.body
+// }

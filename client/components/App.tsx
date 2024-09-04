@@ -5,14 +5,11 @@ function App() {
   return (
     <div>
       <header className="header">
-        <h1>My Books</h1>
-        <nav>
+        {/* <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/books">Books</Link></li>
-            <li><Link to="/about">About</Link></li>
           </ul>
-        </nav>
+        </nav> */}
       </header>
       <section className="main">
         <AppRoutes />
