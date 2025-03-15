@@ -22,10 +22,29 @@ body {
   padding: 20px;
   width: 300px;
   transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .book-item:hover {
   transform: translateY(-5px);
+}
+
+.book-cover {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.book-cover img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.book-details {
+  flex: 1;
 }
 
 .book-item h3 {

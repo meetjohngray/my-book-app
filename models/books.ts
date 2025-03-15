@@ -5,4 +5,5 @@ export interface Book {
   description: string
   genre: string
   authors: string
+  image_url?: string
 }

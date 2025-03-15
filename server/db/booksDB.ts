@@ -9,6 +9,7 @@ export async function getAllBooks(): Promise<Book[]> {
         'books.title',
         'books.publication_year',
         'books.description',
+        'books.image_url',
         'genres.name as genre',
         connection.raw('group_concat(authors.name, ", ") as authors')
       )

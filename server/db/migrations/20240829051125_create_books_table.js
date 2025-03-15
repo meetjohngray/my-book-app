@@ -3,7 +3,6 @@
  * @returns { Promise<void> }
  */
   
-
 export function up(knex) {
   return knex.schema.createTable('books', (table) => {
     table.increments('id').primary()
@@ -11,6 +10,7 @@ export function up(knex) {
     table.integer('genre_id').unsigned().references('id').inTable('genres')
     table.integer('publication_year')
     table.text('description')
+    table.string('image_url').defaultTo(null)
     table.timestamps(true, true)
   })
 }

@@ -3,8 +3,9 @@
  * @returns { Promise<void> } 
  */
 export async function seed(knex) {
-  // Deletes ALL existing entries
-  await knex('genres').del()
+  // We don't delete entries here to avoid foreign key constraints
+  // The deletion happens in the master seed file (00_clean.js)
+  
   await knex('genres').insert([
     { id: 1, name: 'Classic' },
     { id: 2, name: 'Romance' },
